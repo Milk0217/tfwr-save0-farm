@@ -1,6 +1,6 @@
 # The Farmer Was Replaced · Save0 自动化农场工程
 
-> 一个约 7 周的个人游戏开发存档：49 个游戏内自动化脚本、30 个离线工具、7 篇架构决策记录、8 篇开发日志与 6 篇规划文档。
+> 一个 2026-09-11 → 2026-11-02（跨 52 天 / 约 7.4 周）的个人游戏开发存档：49 个游戏内自动化脚本、30 个离线工具、7 篇架构决策记录、8 篇开发日志与 6 篇规划文档。
 > 精选自《The Farmer Was Replaced》(TFWR) 第 0 号存档，已脱敏，可直接阅读、复用与二次开发。
 
 **English (short):** A curated, sanitized snapshot of a personal automation project for *The Farmer Was Replaced* (TFWR) — a programming game where you write code to farm. It contains 49 in-game scripts written in TFWR's Python-like dialect, 30 offline tools (mocks, simulators, static analyzers, regression tests), 7 ADRs, 8 development journals and 6 plans, plus a minimal save snapshot. Game-official docs and the community-maintained `__builtins__.py` are intentionally **not** included for copyright reasons. Licensed under MIT. Not affiliated with the game's developer or publisher.
@@ -159,7 +159,21 @@ python tools/maze_cycle_ab.py
 - **能用模拟就不用真机**：迷宫策略先在 `maze_sim*.py` / `maze_mock.py` 上验证，再进游戏；`maze_gold2.py` 的每一版改动都有对应的离线 A/B 工具。
 - **负结果也记录**：`docs/plans/cactus-parallel.md` 保留了「被实测推翻」的完整方案与对账过程。
 
-> **数据说明（TODO 待 Lead 复核）**：仓库自身的统计（文件数、行数、字节数）为本次整理时实测；历史性能数字（688k、3.45M/分 等）引自开发日志与 `CONTEXT.md` 的实跑记录，未在本仓库中独立复算。完整开发起止日期待确认——日志始于 2026-09-11，`sample` 快照来自 2026-11-02 的存档。
+> **数据说明**：开发窗口为 **2026-09-11 18:53 → 2026-11-02 14:09**（跨 52 天，含首尾 53 个日历日；有文件证据的活跃开发日 15 天）。仓库自身的文件/行数统计为整理时实测；历史性能数字（688k、3.45M/分 等）引自开发日志、`CONTEXT.md` 与最后一次实跑日志 `output.txt`。完整的投入与产出核算见 [`docs/report/开发投入总结报告.md`](docs/report/开发投入总结报告.md)。
+
+## 开发投入速览（2026-09-11 → 2026-11-02）
+
+> 完整报告：[`docs/report/开发投入总结报告.md`](docs/report/开发投入总结报告.md)
+
+| 维度 | 数字 |
+|---|---|
+| 时间 | 跨 52 天（含首尾 53 天，约 7.4 周）；有文件证据的活跃开发日 **15 天**（下限）；三个开发峰 09-11~09-13、10-05~10-08、11-01~11-02 |
+| 代码 | 游戏内脚本 **63 个 / 17,679 行**（本仓精选 49 个 / 16,379 行）；外部工具 **85 个 / 12,647 行**（本仓 30 个 / 6,647 行）；全部 `.py` 149 个 / 32,647 行 |
+| 文档 | 原创 **22 篇 / 5,290 行**（CONTEXT 338 + ADR 267 + journal 3,442 + plans 1,243）；另有游戏官方文档 47 篇仅作参考、不入库 |
+| 迭代 | **44 个补丁脚本**（版本编到 v102）、20 份代码快照、18 份存档快照、1 份 49 个脚本的中程副本；`main.py` BUILD 13→42 |
+| 工具 | 假游戏 `farm_mock.py`、假迷宫、策略模拟、8 个静态检查、7 个回归测试、补丁器与剖析器 |
+| 产出 | **164/164 项解锁**（等级科技 14 项全部满级）；金币 688,178 → 3.45M/分均值 / 4.42M/分峰值；完全复位榜从零解锁跑通 **36,213.96 游戏秒** |
+| 成本 | AI token / API 费用与人工工时：**本地无计费/工时记录，无法量化**；报告以活跃日、迭代版本与资产规模作为代理指标 |
 
 ## 文档导航
 
@@ -171,6 +185,7 @@ python tools/maze_cycle_ab.py
 | [`docs/journal/`](docs/journal/) | 8 篇开发日志（逐日记录 + lessons + handoff） |
 | [`docs/plans/`](docs/plans/) | 6 篇规划（含已推翻方案） |
 | [`REPO_NOTES.md`](REPO_NOTES.md) | 收录/排除清单、脱敏记录、语法检查结果 |
+| [`docs/report/开发投入总结报告.md`](docs/report/开发投入总结报告.md) | 开发投入总结报告：时间 / 迭代 / 代码与文档资产 / 工具链 / AI 协作 / 产出回报 |
 
 推荐阅读顺序：`CONTEXT.md` → `docs/journal/lessons-2026-09-12.md` → `docs/adr/` → `docs/plans/full-run-modularization.md`。
 

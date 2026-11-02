@@ -46,6 +46,7 @@
 | `docs/journal/` | 8 | 原 `.codebuddy/memory/` 精选：4 篇逐日工作日志 + 2 篇 lessons + 2 篇 handoff，全部收录 |
 | `docs/plans/` | 6 | 原 `.codebuddy/plans/`：含**已推翻**的 `cactus-parallel.md`（顶部保留负结果说明） |
 | `docs/README.md` | 1 | 文档索引与阅读顺序（新增） |
+| `docs/report/开发投入总结报告.md` | 1 | 开发投入总结报告（Lead 撰写，407 行 / 33 KB） |
 | `README.md` / `LICENSE` / `.gitignore` / `REPO_NOTES.md` | 4 | 新增 |
 
 ### 2.4 `sample/`
@@ -59,7 +60,7 @@
 | `docs/game/`（游戏官方文档） | 47 篇 | 版权归游戏方所有；可从游戏安装目录 `StreamingAssets/Languages/<EN\|ZH>/docs` 直接读取，公开转存不合适 |
 | `__builtins__.py`（社区类型存根） | 1 个 / 51 KB | 由 TFWR Discord 社区维护、版权归属不明；且实测与游戏行为多处不符（如向日葵加成写成 5 倍，实际 8 倍），不适合作为公开代码收录 |
 | 根目录一次性探针 | 14 个 | `probe.py`、`probe2.py`~`probe8.py`、`probe_cost.py`、`probe_expand.py`、`probe_hf.py`、`probe_import.py`、`probe_pump.py`、`probe_spawn.py`；探针的结论已写进 `CONTEXT.md` / `docs/journal/` |
-| `.codebuddy/tools/patch_*.py` | 60+ 个 | 按锚点字符串改文件的一次性补丁脚本，只服务于本工程历史版本，无复用价值；补丁纪律收录于 `docs/journal/lessons-*.md` |
+| `.codebuddy/tools/patch_*.py` | 44 个 | 按锚点字符串改文件的一次性补丁脚本（full_run 系 v80–v102 共 27 个、maze2 系 10 个、其他 7 个），只服务于本工程历史版本，无复用价值；补丁纪律收录于 `docs/journal/lessons-*.md` |
 | `.codebuddy/tools/probe_*.py` | 6 个 | 同上，一次性探针 |
 | `.codebuddy/tools/_*.txt`、`_fert.md` | 17 个 | 原始运行输出 / 临时笔记，非工具 |
 | `.codebuddy/tools/spec_*.json`、`extra_task3.json` | 30+ 个 | 补丁与文档生成用的一次性 spec 数据 |
@@ -123,12 +124,12 @@
 | `CONTEXT.md` | 1 | 338 | 38,103 |
 | `sample/` | 1 | 217 | 3,473 |
 | 根目录元文件（README / LICENSE / .gitignore / REPO_NOTES / docs/README） | 5 | — | 约 30 KB |
-| **合计** | **107** | — | **约 1.31 MB（1.25 MiB）** |
+| **合计** | **108** | — | **约 1.35 MB（1.29 MiB）** |
 
 ## 8. 待办 / TODO（交接给 Lead）
 
-- [ ] 确认完整开发起止日期与总时长（README 目前写「约 7 周（日志始于 2026-09-11）」，结束日期待定）。
-- [ ] 如需在 README 引用最终实跑速率，建议用最终 `output.txt` 复核（现值 688k → 3.45M/分 引自 `CONTEXT.md` 与开发日志，本步骤未独立复算）。
+- [x] 确认完整开发起止日期与总时长：**2026-09-11 18:53 → 2026-11-02 14:09**（跨 52 天，含首尾 53 个日历日，约 7.4 周；有文件证据的活跃日 15 天）。
+- [x] 已用最终实跑日志复核性能数字（688,178 → 3.45M/分均值、4.42M/分峰值），并写入 README「开发投入速览」与 `docs/report/开发投入总结报告.md`。
+- [x] 已将整理报告放入 `docs/report/开发投入总结报告.md`。
 - [ ] 补充 GitHub 仓库简介与 topics（如 `the-farmer-was-replaced`、`automation`、`game-ai`）。
-- [ ] 将整理报告放入 `docs/report/`（本步骤按约定未写入该目录）。
 - [ ] 确认 LICENSE 署名/年份，添加 remote 并推送（本步骤未推送）。
