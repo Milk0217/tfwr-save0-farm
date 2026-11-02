@@ -1,4 +1,4 @@
-# The Farmer Was Replaced · Save0 自动化农场工程
+# The Farmer Was Replaced · 编程农场 · Save0 自动化农场工程
 
 > 一个 2026-09-11 → 2026-11-02（跨 52 天 / 约 7.4 周）的个人游戏开发存档：49 个游戏内自动化脚本、30 个离线工具、7 篇架构决策记录、8 篇开发日志与 6 篇规划文档。
 > 精选自《The Farmer Was Replaced》(TFWR) 第 0 号存档，已脱敏，可直接阅读、复用与二次开发。
